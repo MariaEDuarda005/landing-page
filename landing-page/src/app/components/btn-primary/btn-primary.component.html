@@ -1,0 +1,28 @@
+<button 
+    (click)="submit()" 
+    [class]="'btn ' + variant"
+    [disabled]="disabled">
+    
+    <!--
+        * se não estiver carregando aparece o botão
+        <span *ngIf="!loading">
+            {{ btnText }}
+        </span>
+
+        * se estiver carregando aparece o texto
+        <span *ngIf="loading">
+            carregando...
+        </span>
+    -->
+
+    <!-- @if(loading){
+        {{ btnText }}
+    } @else {
+        carregando...
+    } -->
+
+    {{ btnText }}
+
+</button>
+
+<!-- se quiser injetar como uma função usa () e se quer injetar uma variavel usa [] -->
