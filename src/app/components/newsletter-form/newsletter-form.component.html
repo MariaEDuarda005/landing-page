@@ -11,7 +11,13 @@
         <btn-primary 
             btn-text="se increva" 
             variant="secondary"
-            (submit)="onSubmit()">
+            (submit)="onSubmit()"
+            [disabled] = "!newsletterForm.valid"
+            [loading] = "loading()"
+        >
         </btn-primary>
     </form>    
 </section>
+
+<!-- [disabled] = "!newsletterForm.valid" =  não deixar enviar se as validações não forem atendidas, o botão fica opaco -->
+<!-- [loading] = "loading()" -> dessa forma chama o getter desse signal e consome o valor que tem dentro desse signal -->
